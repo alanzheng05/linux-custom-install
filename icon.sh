@@ -1,38 +1,38 @@
 #!/bin/bash
 
-# Use Zenity to prompt user to select the script (.sh file) to run and store in a variable
+# Prompt user to select the script to run
+SCRIPT=$(zenity --file-selection --title="Select a script to run" --file-filter="*.sh")
+if [ -z "$SCRIPT" ]; then
+    zenity --error --text="No script selected. Exiting."
+    exit 1
+fi
 
+# Prompt user to select an image for the icon
+ICON=$(zenity --file-selection --title="Select an icon image" --file-filter="*.png *.jpg *.svg")
+if [ -z "$ICON" ]; then
+    zenity --error --text="No icon selected. Exiting."
+    exit 1
+fi
 
-# If no script is selected, exit
+# Prompt user to enter a name for the desktop entry
+NAME=$(zenity --entry --title="Enter desktop shortcut name" --text="Enter a name for your shortcut:")
+if [ -z "$NAME" ]; then
+    NAME="MyShortcut"
+fi
 
+# Define path for the .desktop file
+DESKTOP_FILE="$HOME/Desktop/$NAME.desktop"
 
-# Use Zenity to prompt user to select an image to use as the icon and store in a variable
-
-
-# If no image is selected, exit
-
-
-
-# Use Zenity to prompt user to enter a name for the desktop entry and store in a variable
-
-
-# If no name is entered, use a default name
-
-
-# Define the path for the .desktop file (in the current directory) and store in a variable
-
-
-# Create the .desktop file using echo commands
-# You can echo the content with the variables that you created
-# using all the variables that were stored for path
-# and zenity. The first line will be redirected >
-# the following lines will be added with >>
-
-
-# Copy the .desktop file to the user's desktop
-
+# Create the .desktop file
+echo "[Desktop Entry]" > "$DESKTOP_FILE"
+echo "Type=Application" >> "$DESKTOP_FILE"
+echo "Name=$NAME" >> "$DESKTOP_FILE"
+echo "Exec=bash \"$SCRIPT\"" >> "$DESKTOP_FILE"
+echo "Icon=$ICON" >> "$DESKTOP_FILE"
+echo "Terminal=true" >> "$DESKTOP_FILE"
 
 # Make the .desktop file executable
+chmod +x "$DESKTOP_FILE"
 
-
-# Use Zenity to notify user that the .desktop file has been created and moved
+# Notify the user
+zenity --info --text="Desktop icon '$NAME' has been created on your Desktop."
