@@ -8,7 +8,7 @@
   - Placeholder
 
 - **Bryce Thornton (Member 3)**  
-  - Placeholder
+  - Linux Install and Customization
 
 - **Blake Smith (Member 4)**  
   - Placeholder
