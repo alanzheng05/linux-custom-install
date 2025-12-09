@@ -11,7 +11,7 @@
   - Linux Install and Customization
 
 - **Blake Smith (Member 4)**  
-  - Placeholder
+  - Documentation
 
 - **Osteen katambwa (Member 5)**  
   - Implemented create_backup.sh & icon.sh
