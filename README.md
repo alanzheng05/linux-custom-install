@@ -15,3 +15,6 @@
 
 - **Osteen katambwa (Member 5)**  
   - Implemented create_backup.sh & icon.sh
+
+## Presentation
+[![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](YOUTUBE_VIDEO_LINK)
