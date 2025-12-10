@@ -5,7 +5,7 @@
   - Implemented cronjobs.sh  
 
 - **Karson Null (Member 2)**  
-  - Placeholder
+  - Implement update scripts
 
 - **Bryce Thornton (Member 3)**  
   - Linux Install and Customization
