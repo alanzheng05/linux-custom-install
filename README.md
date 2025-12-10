@@ -16,5 +16,8 @@
 - **Osteen katambwa (Member 5)**  
   - Implemented create_backup.sh & icon.sh
 
-## Presentation
+## Desktop Image Used Link
+[![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)](https://cdimage.ubuntu.com/noble/daily-live/current/)
+
+## Presentation Link
 [![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](YOUTUBE_VIDEO_LINK)
